@@ -1,6 +1,6 @@
 Name:          rest
 Version:       0.8.1
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       A library for access to RESTful web services
 
 License:       LGPLv2
@@ -67,6 +67,10 @@ find %{buildroot} -type f -name "*.la" -delete
 %{_datadir}/gir-1.0/RestExtras-0.7.gir
 
 %changelog
+* Mon Oct 20 2025 Tomas Popela <tpopela@redhat.com> - 0.8.1-3
+- Rebuild for shipping rest-devel in CRB
+- Resolves: RHEL-122462
+
 * Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
