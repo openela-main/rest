@@ -1,6 +1,6 @@
 Name:          rest
 Version:       0.8.1
-Release:       11%{?dist}
+Release:       12%{?dist}
 Summary:       A library for access to RESTful web services
 
 License:       LGPLv2
@@ -74,6 +74,10 @@ find %{buildroot} -type f -name "*.la" -delete
 %{_datadir}/gir-1.0/RestExtras-0.7.gir
 
 %changelog
+* Mon Dec 01 2025 Tomas Popela <tpopela@redhat.com> - 0.8.1-12
+- Ship rest-devel in CRB
+  Resolves: RHEL-122661
+
 * Tue Aug 10 2021 Mohan Boddu <mboddu@redhat.com> - 0.8.1-11
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
