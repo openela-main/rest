@@ -1,6 +1,6 @@
 Name:          rest
 Version:       0.9.1
-Release:       11%{?dist}
+Release:       11%{?dist}.1
 Summary:       A library for access to RESTful web services
 
 License:       LGPL-2.1-only
@@ -12,6 +12,8 @@ Source0:       https://download.gnome.org/sources/%{name}/0.9/%{name}-%{version}
 # https://gitlab.gnome.org/GNOME/librest/-/merge_requests/30
 Patch0:        0001-rest_proxy_call_sync-bail-out-if-no-payload.patch
 Patch1:        0002-Handle-some-potential-problems-in-parsing-oauth2-acc.patch
+# https://gitlab.gnome.org/GNOME/librest/-/issues/25
+Patch2:        0003-CVE-2026-16615-weak-random-number-generation.patch
 
 BuildRequires: meson
 BuildRequires: pkgconfig(glib-2.0)
@@ -80,6 +82,10 @@ Demo application for %{name}.
 %{_datadir}/applications/org.gnome.RestDemo.desktop
 
 %changelog
+* Mon Jul 27 2026 Milan Crha <mcrha@redhat.com> - 0.9.1-11.1
+- Add patch for CVE-2026-16615 (Weak random number generation in PKCE implementation)
+  Resolves: RHEL-213749
+
 * Tue Oct 29 2024 Troy Dawson <tdawson@redhat.com> - 0.9.1-11
 - Bump release for October 2024 mass rebuild:
   Resolves: RHEL-64018
