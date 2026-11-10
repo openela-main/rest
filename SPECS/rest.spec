@@ -1,6 +1,6 @@
 Name:          rest
 Version:       0.9.1
-Release:       11%{?dist}.1
+Release:       12%{?dist}
 Summary:       A library for access to RESTful web services
 
 License:       LGPL-2.1-only
@@ -82,9 +82,9 @@ Demo application for %{name}.
 %{_datadir}/applications/org.gnome.RestDemo.desktop
 
 %changelog
-* Mon Jul 27 2026 Milan Crha <mcrha@redhat.com> - 0.9.1-11.1
+* Mon Jul 27 2026 Milan Crha <mcrha@redhat.com> - 0.9.1-12
 - Add patch for CVE-2026-16615 (Weak random number generation in PKCE implementation)
-  Resolves: RHEL-213749
+  Resolves: RHEL-213751
 
 * Tue Oct 29 2024 Troy Dawson <tdawson@redhat.com> - 0.9.1-11
 - Bump release for October 2024 mass rebuild:
